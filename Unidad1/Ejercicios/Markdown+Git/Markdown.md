@@ -24,9 +24,8 @@ Selecciona los archivos.
 Pulsa Commit changes.
 ![subirarchivo](commithanges.png)
 ![postcomit](postcommitchanges.png)
-### Como crear carpetas
 
-## Hacer conclusion
+## Conclusión
+GitHub es una herramienta que permite guardar proyectos, seguir sus cambios y trabajar con otras personas. Con los pasos básicos que hemos visto (crear un repositorio y subir archivos) ya podemos empezar a usarlo.
 
-## Bibliografia (si es necesario)
 
