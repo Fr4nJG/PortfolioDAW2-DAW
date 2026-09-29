@@ -1,4 +1,4 @@
-# Como usar github para principiantesTitulo
+# Como usar github para principiantes
 GitHub es una plataforma de desarrollo basada en la nube que utiliza el sistema de control de versiones Git. Funciona como un ecosistema donde usuarios y comunidades (de código abierto) gestionan proyectos de software desde su creación hasta su despliegue final. Permite guardar el historial de cambios de un proyecto, trabajar en equipo, revisar código y automatizar tareas, todo desde el navegador o desde la línea de comandos.
 
 ## Como crear repositorio
