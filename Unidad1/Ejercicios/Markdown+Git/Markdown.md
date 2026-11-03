@@ -3,27 +3,27 @@ GitHub es una plataforma de desarrollo basada en la nube que utiliza el sistema 
 
 ## Como crear repositorio
 Inicia sesión en github.com (o crea una cuenta gratuita).
-![Imagen1](1.png)
-![Imagen2](2.png)
+![Imagen1](fotos/1.png)
+![Imagen2](fotos/2.png)
 Pulsa el icono + de la esquina superior derecha y elige New repository.
-![Imagen3](3.png)
-![Imagen4](4.png)
+![Imagen3](fotos/3.png)
+![Imagen4](fotos/4.png)
 Escribe un nombre para el repositorio.
 Elige la visibilidad: Public o Private.
 
 Pulsa Create repository.
-![Imagen5](5.png)
-![penne(propuesta por Cristian Yeremi Roca Parra](6.png)
+![Imagen5](fotos/5.png)
+![penne(propuesta por Cristian Yeremi Roca Parra](fotos/6.png)
 ### Como subir archivos
 Entra en el repositorio y pulsa *creating a new file or uploading an existing file*
-![antesde](subirarchivo(antesde).png)
+![antesde](fotos/subirarchivo(antesde).png)
 
 Selecciona los archivos.
-![despuesde](subirarchivo(despuesde).png)
+![despuesde](fotos/subirarchivo(despuesde).png)
 
 Pulsa Commit changes.
-![subirarchivo](commithanges.png)
-![postcomit](postcommitchanges.png)
+![subirarchivo](fotos/commithanges.png)
+![postcomit](fotos/postcommitchanges.png)
 
 ## Conclusión
 GitHub es una herramienta que permite guardar proyectos, seguir sus cambios y trabajar con otras personas. Con los pasos básicos que hemos visto (crear un repositorio y subir archivos) ya podemos empezar a usarlo.
