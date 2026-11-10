@@ -1,13 +1,32 @@
 # Instalación Ubuntu:
-[imagen1]    
-[imagen2]  
+![imagen1](fotosdani/1oracle.png)   
+![imagen2](fotosdani/2oracle.png)   
 fran y 1234  
-[imagen3]   
+![imagen3](fotosdani/3oracle.png)   
 8MB   
-[imagen4]
+![imagen4](fotosdani/4oracle.png)   
 # Instalación docker
 ## Imágenes:
+![imagen5](fotosdani/ubuntu1.png)    
+![imagen6](fotosdani/ubuntu2.png)    
+![imagen7](fotosdani/ubuntu3.png)    
+![imagen8](fotosdani/ubuntu4.png)     
+![imagen9](fotosdani/ubuntu5.png)    
+![imagen10](fotosdani/ubuntu6.png)   
+![imagen11](fotosdani/ubuntu7.png)   
+![imagen12](fotosdani/ubuntu8.png)    
+![imagen13](fotosdani/ubuntu9.png)    
+![imagen14](fotosdani/ubuntu10.png)    
+![imagen15](fotosdani/ubuntu11.png)   
+![imagen16](fotosdani/ubuntu12.png)   
+![imagen17](fotosdani/ubuntu13.png)    
+![imagen18](fotosdani/ubuntu14.png)   
+![imagen19](fotosdani/ubuntu15.png)   
+![imagen20](fotosdani/ubuntu16.png)    
+![imagen21](fotosdani/ubuntu17.png)   
+
 ## Comandos usados:
+
 
 # Requerimientos mínimos para implantar una aplicación web:
 * ## Requisitos de hardware y software 
