@@ -1,9 +1,9 @@
 # Instalación Ubuntu:
-![imagen1](fotosdani/1oracle.png)   
+![imagen1](fotosdani/1oracle.png)     
 ![imagen2](fotosdani/2oracle.png)   
-fran y 1234  
+En vez dawdani fran y la contraseña 1234   
 ![imagen3](fotosdani/3oracle.png)   
-8MB   
+En vez de 23MB 8 MB   
 ![imagen4](fotosdani/4oracle.png)   
 # Instalación docker
 ## Imágenes:
@@ -26,6 +26,36 @@ fran y 1234
 ![imagen21](fotosdani/ubuntu17.png)   
 
 ## Comandos usados:
+1.sudo apt update          
+2.sudo apt install ca-certificates curl -y                            
+3.sudo install -m 0755 -d /etc/apt/keyrings                        
+4.sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc                       
+                      
+
+5.sudo chmod a+r /etc/apt/keyrings/docker.asc                        
+                                         
+sudo tee /etc/apt/sources.list.d/docker.sources <<EOF     
+Types: deb           
+URIs: https://download.docker.com/linux/ubuntu        
+Suites: (./etc/os-release&&echo"{UBUNTU_CODENAME:-$VERSION_CODENAME}")      
+Components: stable      
+Architectures: $(dpkg --print-architecture)    
+Signed-By: /etc/apt/keyrings/docker.asc    
+EOF    
+
+
+6.sudo apt update            
+7.sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y       
+8.sudo docker run hello-world      
+9.sudo docker search nginx       
+10.sudo docker search tomcat       
+11.sudo docker run -d -p 8080:80 --name webserver nginx       
+12.sudo docker run -d -p 8081:8080 --name appserver tomcat        
+13.sudo docker ps         
+14.sudo docker exec appserver mkdir -p /usr/local/tomcat/webapps/ROOT      
+15. `sudo docker exec appserver sh -c 'echo "<h1>Mi servidor Tomcat funciona correctamente</h1>" > /usr/local/tomcat/webapps/ROOT/index.html'`          
+16.sudo docker stop appserver   
+17.sudo docker stop webserver    
 
 
 # Requerimientos mínimos para implantar una aplicación web:
