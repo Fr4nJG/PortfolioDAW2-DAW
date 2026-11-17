@@ -1,10 +1,8 @@
-n# Memoria de práctica: instalación y configuración de Nginx en Ubuntu
+# Instalación y configuración de Nginx en Ubuntu
 
-**Autor/a:** _(tu nombre)_
-**Fecha:** 17 de noviembre de 2026
-**Módulo / Curso:** _(completar)_
 
----
+
+
 
 ## Índice
 
@@ -19,27 +17,21 @@ n# Memoria de práctica: instalación y configuración de Nginx en Ubuntu
    3. [Validación y aplicación de cambios](#33-validación-y-aplicación-de-cambios)
 4. [Verificación del acceso](#4-verificación-del-acceso)
 5. [Conclusiones y dificultades encontradas](#5-conclusiones-y-dificultades-encontradas)
-6. [Bibliografía](#6-bibliografía)
+
 
 ---
 
 ## 1. Introducción y objetivos
 
-El objetivo de esta práctica es conocer el servidor web **Nginx**, compararlo con Apache e instalarlo y configurarlo en un sistema **Ubuntu**, publicando un sitio web sencillo mediante un *bloque de servidor* (el equivalente en Nginx a un VirtualHost de Apache).
+El objetivo de esta práctica es conocer el servidor web **Nginx**, compararlo con Apache e instalarlo y configurarlo en un sistema **Ubuntu**.
 
-La práctica se divide en tres fases:
 
-- **Investigación:** qué es Nginx, en qué se diferencia de Apache y cómo se instala en Ubuntu.
-- **Ejecución técnica:** instalación, configuración del bloque de servidor y validación/aplicación de los cambios.
-- **Entrega:** esta memoria, con el resumen teórico, los pasos realizados, las evidencias y las conclusiones.
-
----
 
 ## 2. Investigación teórica
 
 ### 2.1. ¿Qué es Nginx?
 
-Nginx (se pronuncia «engine-x») es un software de código abierto que funciona como **servidor web**, pero que también se usa habitualmente como **proxy inverso**, **balanceador de carga** y **caché HTTP**. Se diseñó con la eficiencia y la concurrencia como prioridades: está pensado para atender un gran número de conexiones simultáneas consumiendo pocos recursos.
+Nginx es un software de código abierto que funciona como **servidor web**, pero que también se usa habitualmente como proxy inverso, balanceador de carga y caché HTTP. Está pensado para atender un gran número de conexiones simultáneas consumiendo pocos recursos.
 
 Características principales:
 
@@ -64,15 +56,14 @@ Estructura habitual de ficheros en Ubuntu:
 | Aspecto | Nginx | Apache |
 |---|---|---|
 | **Modelo de procesamiento** | Orientado a eventos y asíncrono: pocos *workers* atienden muchas conexiones | Basado en MPM (*Multi-Processing Modules*): un proceso o hilo por conexión (el MPM *event* mejora esto) |
-| **Contenido estático** | Muy rápido y con poco consumo de memoria | Bueno, pero con mayor consumo de recursos bajo carga |
-| **Contenido dinámico (PHP, etc.)** | No lo procesa por sí mismo: delega en un intérprete externo (p. ej. PHP-FPM) | Puede ejecutarlo mediante módulos integrados (p. ej. `mod_php`) |
+| **Contenido estático** | Muy rápido y con poco consumo de memoria | Mayor consumo de recursos bajo carga |
+| **Contenido dinámico (PHP, etc.)** | No lo procesa por sí mismo: delega en un intérprete externo | Puede ejecutarlo mediante módulos integrados |
 | **Configuración por directorio** | No admite `.htaccess`; todo se configura de forma centralizada y requiere recargar el servidor | Admite `.htaccess`, que permite cambios por directorio sin acceso a la configuración principal |
 | **Módulos** | Soporta módulos dinámicos, pero muchos de terceros requieren compilar Nginx | Gran catálogo de módulos que se activan/desactivan fácilmente (`a2enmod`) |
 | **Virtual hosts** | *Server blocks* (`server { ... }`) | `<VirtualHost>` |
 | **Uso típico** | Alta concurrencia, proxy inverso, balanceo de carga, contenedores | Hosting compartido, aplicaciones que dependen de `.htaccess` |
 | **Curva de aprendizaje** | Algo más exigente para principiantes (sin `.htaccess`, intérpretes externos) | Más sencillo y flexible para usuarios con poco acceso al servidor |
 
-**Resumen:** Nginx destaca por rendimiento y escalabilidad, y Apache por flexibilidad y facilidad de personalización. En muchos despliegues se usan juntos (Nginx delante como proxy inverso y Apache detrás), aunque en esta práctica se usará Nginx de forma independiente.
 
 ### 2.3. Instalación y ejecución en Ubuntu (resumen)
 
@@ -322,7 +313,6 @@ Resultado esperado: `HTTP/1.1 404 Not Found`.
 
 ### Conclusiones
 
-- Nginx se instala en Ubuntu con muy pocos comandos y arranca automáticamente, lo que facilita ponerlo en marcha rápidamente.
 - El **bloque `server`** cumple la misma función que un VirtualHost de Apache, y el esquema `sites-available` / `sites-enabled` con enlaces simbólicos permite activar y desactivar sitios sin borrar su configuración.
 - Validar con `nginx -t` antes de recargar es una buena práctica: evita dejar el servidor caído por un error de sintaxis.
 - La diferencia de diseño con Apache (arquitectura por eventos, configuración centralizada y sin `.htaccess`) hace de Nginx una opción muy adecuada para contenido estático, alta concurrencia y proxy inverso, a cambio de menos flexibilidad por directorio.
@@ -331,22 +321,8 @@ Resultado esperado: `HTTP/1.1 404 Not Found`.
 
 > _Completar con tu experiencia real. Estas son las más habituales; conserva solo las que te hayan ocurrido y añade las tuyas._
 
-- **Conflicto con Apache en el puerto 80** si ambos servidores están instalados: hubo que detener uno de ellos.
-- **Errores de sintaxis** en el bloque (por ejemplo, olvidar el `;` al final de una directiva), detectados con `nginx -t`.
-- **Permisos del directorio** `/var/www/...`, que producen un error `403 Forbidden` si Nginx no puede leer los ficheros.
-- **Resolución del dominio de prueba:** sin la entrada en `/etc/hosts`, el navegador no encontraba `nginx-practica.local`.
-- **Sitio por defecto activo:** si no se desactiva o no se define bien `server_name`, puede responder el bloque `default` en lugar del nuevo.
-- **Adaptación mental desde Apache:** no existe `.htaccess` y los cambios requieren recargar el servicio.
+- Errores de sintaxis en el bloque.
+- Resolución del dominio de prueba: sin la entrada en `/etc/hosts`, el navegador no encontraba `nginx-practica.local`.
+- Sitio por defecto activo: si no se desactiva o no se define bien `server_name`, puede responder el bloque `default` en lugar del nuevo.
+- Adaptación mental desde Apache: no existe `.htaccess` y los cambios requieren recargar el servicio.
 
----
-
-## 6. Bibliografía
-
-- Nginx. *Documentación oficial*. https://nginx.org/en/docs/
-- OperaVPS. *Tutorial of Installing and Managing Nginx on Ubuntu*. https://operavps.com/?p=15237
-- PiMyLifeUp. *How to Install and Configure NGINX on Ubuntu*. https://pimylifeup.com/ubuntu-nginx/
-- LinuxConfig. *How to Install and Configure Nginx on Ubuntu 26.04*. https://linuxconfig.org/how-to-install-and-configure-nginx-on-ubuntu-26-04
-- Cherry Servers. *How to Install and Configure Nginx on Ubuntu 20.04*. https://www.cherryservers.com/blog/how-to-install-and-configure-nginx-on-ubuntu-20-04
-- phoenixNAP. *How to Install Nginx on Ubuntu*. https://phoenixnap.com/kb/?p=173288
-- Site24x7. *Apache vs. Nginx: A Definitive Comparison*. https://www.site24x7.com/learn/web-server/apache-vs-nginx-web-server.html
-- Hostinger. *NGINX vs. Apache: Which web server is better for performance and scalability?* https://www.hostinger.com/tutorials/nginx-vs-apache-what-to-use/
