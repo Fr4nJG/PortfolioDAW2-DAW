@@ -1,4 +1,4 @@
-# Memoria de práctica: instalación y configuración de Nginx en Ubuntu
+n# Memoria de práctica: instalación y configuración de Nginx en Ubuntu
 
 **Autor/a:** _(tu nombre)_
 **Fecha:** 17 de noviembre de 2026
@@ -117,7 +117,7 @@ nginx -v
 
 El estado debe mostrar `active (running)`.
 
-📷 **[CAPTURA 1]** Salida de `systemctl status nginx` y `nginx -v`.
+![fotoMagica](fotos/foto1) Salida de `systemctl status nginx` y `nginx -v`.
 
 **Paso 4. (Si UFW está activo) Permitir el tráfico HTTP**
 
