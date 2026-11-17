@@ -117,8 +117,9 @@ nginx -v
 
 El estado debe mostrar `active (running)`.
 
-![fotoMagica](fotos/foto1) Salida de `systemctl status nginx` y `nginx -v`.
-
+![fotoMagica](fotos/foto1)
+![fotoMagica](fotos/foto2)  
+ Salida de `systemctl status nginx` y `nginx -v`.
 **Paso 4. (Si UFW está activo) Permitir el tráfico HTTP**
 
 ```bash
@@ -134,7 +135,7 @@ curl -I http://localhost
 
 o abrir `http://localhost` en el navegador. Debe aparecer *«Welcome to nginx!»*.
 
-📷 **[CAPTURA 2]** Página de bienvenida de Nginx en el navegador (o `curl -I` con `HTTP/1.1 200 OK`).
+![fotoMagica](fotos/foto3) Página de bienvenida de Nginx en el navegador (o `curl -I` con `HTTP/1.1 200 OK`).
 
 > **Nota:** si Apache estuviera instalado y escuchando en el puerto 80, habría un conflicto. En ese caso hay que detenerlo antes (`sudo systemctl stop apache2`) o cambiar uno de los dos de puerto.
 
@@ -213,7 +214,7 @@ Explicación de las directivas:
 | `access_log` / `error_log` | Registros específicos del sitio | `CustomLog` / `ErrorLog` |
 | `location /` | Reglas para una ruta; `try_files` devuelve 404 si no existe el recurso | `<Directory>` / `<Location>` |
 
-📷 **[CAPTURA 3]** Fichero `/etc/nginx/sites-available/nginx-practica.local` abierto en el editor.
+![fotoMagica](fotos/foto4) Fichero `/etc/nginx/sites-available/nginx-practica.local` abierto en el editor.
 
 **Paso 5. Activar el bloque creando un enlace simbólico**
 
@@ -254,7 +255,8 @@ nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
 nginx: configuration file /etc/nginx/nginx.conf test is successful
 ```
 
-📷 **[CAPTURA 4]** Resultado de `sudo nginx -t`.
+![fotoMagica](fotos/foto5)  
+ Resultado de `sudo nginx -t`.
 
 **Paso 2. Aplicar los cambios sin cortar el servicio**
 
@@ -284,13 +286,15 @@ curl http://nginx-practica.local
 
 Resultado esperado: cabecera `HTTP/1.1 200 OK` con `Server: nginx/...` y el HTML de la página de prueba.
 
-📷 **[CAPTURA 5]** Salida de `curl -I http://nginx-practica.local` mostrando `200 OK` y `Server: nginx`.
+![fotoMagica](fotos/foto6)  
+ Salida de `curl -I http://nginx-practica.local` mostrando `200 OK` y `Server: nginx`.
 
 **Prueba 2. Desde el navegador**
 
 Abrir `http://nginx-practica.local` y comprobar que aparece el mensaje «¡Funciona! Este sitio se sirve con Nginx».
 
-📷 **[CAPTURA 6]** Página del sitio en el navegador con la URL visible.
+![fotoMagica](fotos/foto7)  
+ Página del sitio en el navegador con la URL visible.
 
 **Prueba 3. Comprobar los registros**
 
@@ -300,13 +304,15 @@ sudo tail -n 5 /var/log/nginx/nginx-practica.access.log
 
 Deben aparecer las peticiones realizadas en las pruebas anteriores.
 
-📷 **[CAPTURA 7]** Últimas líneas del registro de accesos.
+![fotoMagica](fotos/foto8)  
+ Últimas líneas del registro de accesos.
 
 **Prueba 4. Comprobar el error 404 (control de `try_files`)**
 
 ```bash
 curl -I http://nginx-practica.local/no-existe
 ```
+![fotoMagica](fotos/fotoError)  
 
 Resultado esperado: `HTTP/1.1 404 Not Found`.
 
