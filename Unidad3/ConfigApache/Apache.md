@@ -142,7 +142,7 @@ sudo systemctl reload apache2
 ```
  
 ![fotoMagica](fotos/7.png)  
-![fotoMagica](fotos/8.png)  
+![fotoMagica](fotos/Screenshot from 2026-11-24 19-05-18.png)  
 
  
 ### 2.6 Problemas surgidos
