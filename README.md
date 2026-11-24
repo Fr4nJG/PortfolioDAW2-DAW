@@ -7,7 +7,6 @@
 ### [Ejercicios](https://github.com/Fr4nJG/PortfolioDAW2-DAW/tree/main/Unidad2/Ejercicios)
 ### [Diarios](https://github.com/Fr4nJG/PortfolioDAW2-DAW/blob/main/Unidad2/Diario.md)
 ## Unidad 3
-### [Ejercicios](https://github.com/Fr4nJG/PortfolioDAW2-DAW/tree/main/Unidad3/Nginx)
 ### [Ejercicios](https://github.com/Fr4nJG/PortfolioDAW2-DAW/tree/main/Unidad3/Ejercicios)
 ### [Diarios](https://github.com/Fr4nJG/PortfolioDAW2-DAW/blob/main/Unidad3/Diario.md)
 ## Unidad 4
