@@ -141,10 +141,10 @@ Dentro del `<VirtualHost>`:
 sudo systemctl reload apache2
 ```
  
-![fotoMagica](fotos/7.png)  
 ![fotoMagica](fotos/sda)  
 
- 
+ ![fotoMagica](fotos/7.png)  
+
 ### 2.6 Problemas surgidos
 Error al conectar al puerto 80.    
 Error al ejecutar incios de sesion.
