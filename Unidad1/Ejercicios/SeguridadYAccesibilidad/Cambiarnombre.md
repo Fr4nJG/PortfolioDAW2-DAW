@@ -6,81 +6,63 @@ Repositorio: [https://github.com/Fr4nJG/Seguridad](https://github.com/HoliRabiol
 
 ## 1. Creación del repositorio
 
-Se creó el repositorio `Seguridad` el `.gitignore` y el `SECURITY.md`.
+Se creó el repositorio.
 
-[CAPTURA]
+ ![Imagen de la foto 1](fotos/1.png)
 
-Además, se publicó con GitHub Pages desde la rama `main` para ver el resultado en `https://fr4njg.github.io/Seguridad/`, donde aparece el mensaje **Hola!**.
 
-[CAPTURA]
 
----
+
 
 ## 2. Invitación al colaborador
 
 Se invitó al compañero desde **Settings → Collaborators and teams → Add people**.
+ ![Imagen de la foto 2](fotos/2.png)
 
-[CAPTURA]
 
----
+
+
 
 ## 3. Prueba con permiso de lectura (Read)
 
 El colaborador tiene el rol **Read**. Puede ver el código y comentar, pero no puede modificar el repositorio.
 
 Vista del colaborador con rol de lectura:
-
-[CAPTURA]
+ ![Imagen de la foto 3](fotos/3.png)
 
 El colaborador no puede acceder a **Settings**:
+ ![Imagen de la foto 4](fotos/4.png)
 
-[CAPTURA]
 
----
 
 ## 4. Prueba con permiso de escritura (Write)
 
 Se cambió el rol del colaborador a **Write**.
 
 Rol del colaborador como escritor:
+ ![Imagen de la foto 5](fotos/5.png)
 
-[CAPTURA]
 
 El colaborador añade un archivo al repositorio:
+ ![Imagen de la foto 6](fotos/6.png)
 
-[CAPTURA]
 
 El colaborador sigue sin poder entrar en **Settings**:
+ ![Imagen de la foto 7](fotos/7.png)
 
-[CAPTURA]
 
----
+
 
 ## 5. Prueba con permiso de administrador (Admin)
 
 Se cambió el rol del colaborador a **Admin**.
 
 Rol del colaborador como administrador:
+ ![Imagen de la foto 8](fotos/8.png)
 
-[CAPTURA]
 
 El colaborador ya puede entrar en **Settings**:
 
-[CAPTURA]
+ ![Imagen de la foto 9](fotos/9.png)
 
----
 
-## 6. Resumen de resultados
-
-| Prueba | Rol | Resultado observado |
-|---|---|---|
-| Ver el código y comentar | Read | Permitido |
-| Guardar cambios en el repositorio | Read | No permitido |
-| Entrar en Settings | Read | No permitido |
-| Añadir un archivo | Write | Permitido |
-| Entrar en Settings | Write | No permitido |
-| Entrar en Settings | Admin | Permitido |
-
-## 7. Conclusión
-
-El nivel de permiso condiciona lo que cada persona puede hacer: **Read** sirve para consultar, **Write** para aportar código y **Admin** para gestionar el repositorio. Se recomienda dar siempre el permiso mínimo necesario. El detalle de roles y medidas de seguridad está en `SECURITY.md`.
