@@ -1,6 +1,6 @@
 #  Configuración y pruebas de acceso
 
-Repositorio: [https://github.com/Fr4nJG/Seguridad](https://github.com/HoliRabioli/prueba/tree/main)
+Repositorio: [https://github.com/HoliRabioli/prueba/tree/main](https://github.com/HoliRabioli/prueba/tree/main)
 
 
 
